@@ -1,4 +1,4 @@
-1.
-2.
-3.
-4.
+1. find  [-H]  [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [ex‐pression]
+2. ps [options]
+3. kill [options] <pid> [...]
+4. diff [OPTION]... FILES
