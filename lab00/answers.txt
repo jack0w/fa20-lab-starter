@@ -1,4 +1,9 @@
-1. find  [-H]  [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [ex‐pression]
-2. ps [options]
-3. kill [options] <pid> [...]
-4. diff [OPTION]... FILES
+1. ls -l
+2. mv [OPTION]... [-T] SOURCE DEST 
+3. chmod [OPTION]... MODE[,MODE]... FILE... 
+4. pwd
+5. nm-online
+6. find  [-H]  [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [ex‐pression]
+7. ps [options]
+8. kill [options] <pid> [...]
+9. diff [OPTION]... FILES
