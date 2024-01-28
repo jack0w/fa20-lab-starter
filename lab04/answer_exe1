@@ -1,0 +1,55 @@
+Mistake 1:
+add t1, s0, x0      # load the address of the array of current node into t1
+
+It actually load the address of current node into t1.
+
+Fix:
+lw t1, 0(s0)
+
+
+Mistake 2:
+add t1, t1, t0      # offset the array address by the count
+lw a0, 0(t1)        # load the value at that address into a0
+
+We need to multiply t0 by 4 and add 4 * t0 to t1 to affect the array address
+
+Fix: 
+slli t3, t0, 2
+add t4, t3, t1
+lw a0, 0(t4)
+
+
+Mistake 3:
+Need to save & load t0, t1, t2 before and after "jalr s1"
+
+Fix:
+addi sp, sp, -12
+sw t0, 0(sp)
+sw t1, 4(sp)
+sw t2, 8(sp)
+
+jalr s1
+
+lw t0, 0(sp)
+lw t1, 4(sp)
+lw t2, 8(sp)
+addi sp, sp, 12
+
+
+Mistake 4:
+la a0, 8(s0)        # load the address of the next node into a0
+
+la is for loading the address of label
+
+Fix:
+lw a0, 8(s0)
+
+
+Mistake 5:
+ lw a1, 0(s1)        # put the address of the function back into a1 to prepare for the recursion
+
+This is loading the word of starting at address in s1
+
+Fix:
+mv a1, s1
+
