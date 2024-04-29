@@ -1,0 +1,9 @@
+Exe 1:
+
+Maxiumn clock rate = CLK-to-Q of previous registers + adder block delay + multiplication block delay + setup time + hold time
+= 10 + 45 + 60 + 10 + 5 = 130 ns
+
+
+Exe 2:
+
+Maximum clock rate = clock rate for critical path = 10 + 60 + 10 + 5 = 85 ns
