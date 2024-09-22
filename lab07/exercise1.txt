@@ -1,24 +1,24 @@
 Scenario 1
-    1.
-    2.
-    3.
+    1.step size, cache size
+    2.0
+    3.step size, 1
 
 Scenario 2
-    1.
-    2.
-    3.
+    1.64
+    2.MHHH
+    3.The hit rate approaches 1.0 as rep count goes up
 
 Scenario 3
-    1.
-    2.
-    3.
-    4.
-    5.
+    1.0.5, 0.0, 0.5
+    2.32, 16
+    3.16
+    4.block size of L2. EX: Changing block size of L2 to 16 increases L2 hit rate to 0.5
+    5.=, =, >, =
 
 --- lines below are ignored by the AG ---
 
-Checkoff Question 1:
-Checkoff Question 2:
-Checkoff Question 3:
-Checkoff Question 4:
-Checkoff Question 5:
+Checkoff Question 1:All accesses are mapped to the same location in cache 
+Checkoff Question 2:step size and array size
+Checkoff Question 3:In every 4 access, the first is a miss and the rest are hits. Hit rate is 75%
+Checkoff Question 4:The whole memory is loaded in the cache in the first rep. The accesses in the following rep are all hits
+Checkoff Question 5:We should try to access array by sections of the size equal to the cache size and apply all of the functions to that section so we can be completely done with it before moving on, thereby keeping that section of array hot in the cache and not having to circle back later

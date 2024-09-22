@@ -1,8 +1,8 @@
-1.
-2.
+1.jki(5.078 Gflops/s), kji(4.110 Gflops/s)
+2.ikj(0.077 Gflops/s), kij(0.082 Gflops/s)
 
 --- lines below are ignored by the AG ---
 
-Checkoff Question 1:
-Checkoff Question 2:
-Checkoff Question 3:
+Checkoff Question 1: In the innermost loop, we move through A, B, C with stride 1, 0, 1. It exploit spatial locality effectively
+Checkoff Question 2: In the innermost loop, we move through A, B, C with stride 0, n, n. It doesn't exploit spacial locality
+Checkoff Question 3: The smaller the strides of A,B,C in the innermost loop, the faster the performance is

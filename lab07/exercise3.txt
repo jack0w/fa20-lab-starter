@@ -1,20 +1,20 @@
 --- not autograded ---
 
 Part 1
-    blocksize = 20, n = 100: 
-    blocksize = 20, n = 1000: 
-    blocksize = 20, n = 2000: 
-    blocksize = 20, n = 5000: 
-    blocksize = 20, n = 10000: 
+    blocksize = 20, n = 100: naive transpose 0.005 ms, transpose with blocking 0.006 ms
+    blocksize = 20, n = 1000: naive transpose 1.857 ms, transpose with blocking 1.705 ms
+    blocksize = 20, n = 2000: naive transpose 50.577 ms, transpose with blocking 9.398 ms
+    blocksize = 20, n = 5000: naive transpose 324.178 ms, transpose with blocking 33.036 ms
+    blocksize = 20, n = 10000: naive transpose 1596.03 ms, transpose with blocking 158.508 ms
 
-    Checkoff Question 1:
-    Checkoff Question 2:
+    Checkoff Question 1: when n = 1000
+    Checkoff Question 2: When the size of matrix is small, the spatial locality is not getting better exploited by the blocking. The cache may hold the entire matrix
 
 Part 2
-    blocksize = 50, n = 10000:
-    blocksize = 100, n = 10000:
-    blocksize = 500, n = 10000:
-    blocksize = 1000, n = 10000:
-    blocksize = 5000, n = 10000:
+    blocksize = 50, n = 10000: naive transpose 1210.95 ms, transpose with blocking 192.456 ms
+    blocksize = 100, n = 10000: naive transpose 1454.93 ms, transpose with blocking 156.812 ms
+    blocksize = 500, n = 10000: naive transpose 1253.51 ms, transpose with blocking 135.759 ms
+    blocksize = 1000, n = 10000: naive transpose 1202.7 ms, transpose with blocking 172.225 ms
+    blocksize = 5000, n = 10000: naive transpose 1411.97 ms, transpose with blocking 1667.14 ms
 
-    Checkoff Question 3:
+    Checkoff Question 3: The performance is faster as blocksize increasing from 50 to 500 and slower as blocksize increasing further. When the blocksize reaches a threshold, each block becomes a big matrix w.r.t cache which requires very long time to transpose. It defeats the purpose of blocking which it using spacial locality in a small area
